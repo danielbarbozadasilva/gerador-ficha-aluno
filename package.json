@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "pc@pc-Lenovo-ideapad-320-15IKB:~/Área de Trabalho/BOOTCAMP/PROJETOS/gerador-de-curriculo/backend$ npm install expresss nodemon body-parser ejs cors",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "expresss": "0.0.0",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/daniel.bsilva/geradorcurriculo.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/daniel.bsilva/geradorcurriculo/issues"
+  },
+  "homepage": "https://gitlab.com/daniel.bsilva/geradorcurriculo#readme"
+}
