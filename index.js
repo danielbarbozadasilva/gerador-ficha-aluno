@@ -1,4 +1,9 @@
-/* Puxa com a constante require (função do javascript, 
+/* 
+YARN - É MAIS RÁPIDO, EXECUTOR DO 'NPM' COM --CACHE--, 
+USAR 'NPM' OU 'YARN' É A MESMA COISA. É NECESSÁRIO INSTALAR.
+(npm install -g yarn)
+
+Puxa com a constante require (função do javascript, 
 vou ao 'npm' buscar uma biblioteca) ('nome_da_biblioteca'); 
  GET /
  Query string
@@ -54,7 +59,7 @@ isso em um objeto dentro do objeto de requisição (req): req. body.
 
 Puxa com a constante require (função do javascript, 
 vou ao 'npm' buscar uma biblioteca) ('nome_da_biblioteca'); */
-const express = require('express');
+const express = require('express'); // express está dentro do 'node_modules'
 
 /* path - módulo do node */
 const path = require('path');
@@ -78,46 +83,36 @@ app.set('view engine', 'ejs');
 /* Deixa 'VISIVEL' o conteúdo da pasta 'PUBLIC'
 Pega o '__dirname' (diretório atua) e junta com '/public'
 ~/Área de Trabalho/BOOTCAMP/PROJETOS/gerador-de-curriculo/public$ */
+
+
+/* ---------------------------------MIDDLEARES--------------------------------------- */
+
 app.use(express.static(path.join(__dirname, '/public')));
 const handlerRaiz = (req, res, next) => {
-    res.render('index', {
-        nome: "TESTE EJS"
-    });
+    res.render('index', {nome: "TESTE EJS"});
 }
 app.use(express.static(path.join(__dirname, '/views')));
 const handlerIndex = (req, res, next) => {
-    res.render('index', {
-
-    });
+    res.render('index', {});
 }
-
 app.use(express.static(path.join(__dirname, '/views')));
 const handlerSobre = (req, res, next) => {
-    res.render('sobre', {
-
-    });
+    res.render('sobre', {});
 }
 app.use(express.static(path.join(__dirname, '/views')));
 const handlerFichaAluno = (req, res, next) => {
-    res.render('ficha-form-aluno', {
-
-    });
+    res.render('ficha-form-aluno', {});
 }
 app.use(express.static(path.join(__dirname, '/views')));
 const handlerFichaContratante = (req, res, next) => {
-    res.render('ficha-form-contratante', {
-
-    });
+    res.render('ficha-form-contratante', {});
 }
 app.use(express.static(path.join(__dirname, '/views')));
 const hendlerFichaPagamento = (req, res, next) => {
-    res.render('ficha-form-pagamento', {
-
-    });
+    res.render('ficha-form-pagamento', {});
 }
 
-
-
+/* ---------------------------------ROTAS------------------------------------------ */
 app.get('/', handlerRaiz);
 app.get('/index', handlerIndex);
 app.get('/sobre', handlerSobre);

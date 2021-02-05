@@ -1,18 +1,14 @@
 const ejs = require('ejs');
 const html_to_pdf = require('html-pdf-node');
-
-// chama a 'filesystem'
 const fs = require('fs');
 
-
-// 'middleware' dentro do controllers !!!
-const handlerGetCurriculo = (req, res, next) => {
-    res.render('curriculo-form-aluno', {
+/*----------------------------------MIDDLEWARES------------------------------------*/
+const handlerGetFicha = (req, res, next) => {
+    res.render('ficha-form-aluno', {
         nome: "TESTE EJS"
     });
 }
-const handlerPostCurriculo = (req, res, next) => {
-
+const handlerPostFicha = (req, res, next) => {
     console.log(req.body);
     const body = req.body;
 
@@ -50,26 +46,23 @@ const handlerPostCurriculo = (req, res, next) => {
     /* criar html - carregou o 'html' para a memória, 'filesystem' trabalha
     na raiz, utf8 (método fillesync para escrever em caractéres alfanuméricos) */
     var htmlText = fs.readFileSync('./views/curriculo-pdf.ejs', 'utf8');
-    // console.log(htmlText);
-
     var htmlPronto = ejs.render(htmlText, viewModel);
 
-    /* Transformar em PDF */
-    let file = { content: htmlPronto };
+// TRANSFORMAR EM PDF
+
+let file = { content: htmlPronto };
     let options = { format: 'A4' };
   
     html_to_pdf.generatePdf(file, options)
       .then(pdfBuffer => {
-  
-        res.contentType("application/pdf");
-        res.send(pdfBuffer);
-  
+            res.contentType("application/pdf");
+            res.send(pdfBuffer);
       });
   
 }
 
-// exporto o 'middleware'
+// EXPORTO OS MIDDLEWARES
 module.exports = {
-    CurriculoGet: handlerGetCurriculo,
-    CurriculoPost: handlerPostCurriculo
+    FichaGet: handlerGetFicha,
+    FichaPost: handlerPostFicha
 }
