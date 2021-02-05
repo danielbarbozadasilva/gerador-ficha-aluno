@@ -70,7 +70,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // chama o controller
-const curriculoController = require('./controllers/curriculo-controller');
+const fichaController = require('./controllers/ficha-controller');
 
 /* tenho 'ejs' como view engine, ele vai no 'node_modules' pegar o 'ejs' */
 app.set('view engine', 'ejs');
@@ -98,20 +98,20 @@ const handlerSobre = (req, res, next) => {
     });
 }
 app.use(express.static(path.join(__dirname, '/views')));
-const handlerAluno = (req, res, next) => {
-    res.render('curriculo-form-aluno', {
+const handlerFichaAluno = (req, res, next) => {
+    res.render('ficha-form-aluno', {
 
     });
 }
 app.use(express.static(path.join(__dirname, '/views')));
-const handlerContratante = (req, res, next) => {
-    res.render('curriculo-form-contratante', {
+const handlerFichaContratante = (req, res, next) => {
+    res.render('ficha-form-contratante', {
 
     });
 }
 app.use(express.static(path.join(__dirname, '/views')));
-const hendlerPagamento = (req, res, next) => {
-    res.render('curriculo-form-pagamento', {
+const hendlerFichaPagamento = (req, res, next) => {
+    res.render('ficha-form-pagamento', {
 
     });
 }
@@ -121,9 +121,9 @@ const hendlerPagamento = (req, res, next) => {
 app.get('/', handlerRaiz);
 app.get('/index', handlerIndex);
 app.get('/sobre', handlerSobre);
-app.get('/curriculo-form-aluno', handlerAluno);
-app.get('/curriculo-form-contratante', handlerContratante);
-app.get('/curriculo-form-pagamento', hendlerPagamento);
+app.get('/ficha-form-aluno', handlerFichaAluno);
+app.get('/ficha-form-contratante', handlerFichaContratante);
+app.get('/ficha-form-pagamento', hendlerFichaPagamento);
 
 
 /*-------------------------------------------------------
@@ -145,8 +145,8 @@ console.log('olá mundo!!');
 -------------------------------------------------------*/
 
 /*  chamo o 'midleware' que exportei no controller */
-app.get('/curriculo-form-aluno', curriculoController.CurriculoGet);
-app.post('/curriculo-form-aluno', curriculoController.CurriculoPost);
+app.get('/ficha-form-aluno', fichaController.FichaGet);
+app.post('/ficha-form-aluno', fichaController.FichaPost);
 
 /* Podemos http(80), https(443) posso colocar qualquer porta */
 app.listen(3001, () => {
