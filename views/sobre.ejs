@@ -1,30 +1,78 @@
-<!DOCTYPE html>
+<!-- '.ejs' - vou construir o meu template -->
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
+    <title>Gerador de currículos - Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <script src="../javascript/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
 </head>
 
 <body>
+   
 
     <header>
         <div class="logo"></div>
         <div class="menu">
             <ul>
-                <li><a href="index.ejs">Home</a> </li>
-                <li><a href="curriculo-form.ejs">Formulário</a> </li>
-                <li><a class="atual" href="sobre.ejs">Sobre</a> </li>
+                <li><a href="index">Home</a></li>
+                <li><a class="atual" href="#">Sobre</a></li>
+                <li><a href="curriculo-form-aluno">Formulário</a></li>
             </ul>
         </div>
     </header>
-    <main>2</main>
-    <footer>footer</footer>
+
+    <main></main>
+
+    <!------------------------ RODAPÉ--------------------------- -->
+    <footer class="rodape">
+
+        <div class="chamada">Redes sociais</div>
+        <div class="icones">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+
+        <div class="imagem">
+            <img src="imagens/footer-logo.png" class="footer-logo" alt="">
+        </div>
+        <div class="endereco">
+            <div class="info">
+                <div class="address">
+                    <h6> <i class="fas fa-map-marker-alt"></i>
+                        Endereço: Av. das Americas, 392</h6>
+                </div>
+
+                <div class="email">
+                    <h6><i class="far fa-envelope"> </i>
+                        Email: studioyoga@gmail.com</h6>
+                </div>
+
+                <div class="phone">
+                    <h6><i class="fas fa-phone-square-alt"></i>
+                        Telefone: (21) 2822-9822</h6>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="">
+            <div class="">
+                <h3 class="">Desenvolvido por Daniel Barboza</h3>
+            </div>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>

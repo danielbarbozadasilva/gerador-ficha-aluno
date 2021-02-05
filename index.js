@@ -61,7 +61,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 // crio uma constante e atribuo a função
-const app = express(); 
+const app = express();
 
 // prepara a rota para tratar 'json'
 app.use(bodyParser.json());
@@ -79,14 +79,52 @@ app.set('view engine', 'ejs');
 Pega o '__dirname' (diretório atua) e junta com '/public'
 ~/Área de Trabalho/BOOTCAMP/PROJETOS/gerador-de-curriculo/public$ */
 app.use(express.static(path.join(__dirname, '/public')));
-
 const handlerRaiz = (req, res, next) => {
     res.render('index', {
         nome: "TESTE EJS"
     });
 }
+app.use(express.static(path.join(__dirname, '/views')));
+const handlerIndex = (req, res, next) => {
+    res.render('index', {
+
+    });
+}
+
+app.use(express.static(path.join(__dirname, '/views')));
+const handlerSobre = (req, res, next) => {
+    res.render('sobre', {
+
+    });
+}
+app.use(express.static(path.join(__dirname, '/views')));
+const handlerAluno = (req, res, next) => {
+    res.render('curriculo-form-aluno', {
+
+    });
+}
+app.use(express.static(path.join(__dirname, '/views')));
+const handlerContratante = (req, res, next) => {
+    res.render('curriculo-form-contratante', {
+
+    });
+}
+app.use(express.static(path.join(__dirname, '/views')));
+const hendlerPagamento = (req, res, next) => {
+    res.render('curriculo-form-pagamento', {
+
+    });
+}
+
+
 
 app.get('/', handlerRaiz);
+app.get('/index', handlerIndex);
+app.get('/sobre', handlerSobre);
+app.get('/curriculo-form-aluno', handlerAluno);
+app.get('/curriculo-form-contratante', handlerContratante);
+app.get('/curriculo-form-pagamento', hendlerPagamento);
+
 
 /*-------------------------------------------------------
 app.get('/curriculo-form', (req, res, next) => {
@@ -107,8 +145,8 @@ console.log('olá mundo!!');
 -------------------------------------------------------*/
 
 /*  chamo o 'midleware' que exportei no controller */
-app.get('/curriculo-form', curriculoController.CurriculoGet);
-app.post('/curriculo-form', curriculoController.CurriculoPost);
+app.get('/curriculo-form-aluno', curriculoController.CurriculoGet);
+app.post('/curriculo-form-aluno', curriculoController.CurriculoPost);
 
 /* Podemos http(80), https(443) posso colocar qualquer porta */
 app.listen(3001, () => {

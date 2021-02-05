@@ -7,7 +7,7 @@ const fs = require('fs');
 
 // 'middleware' dentro do controllers !!!
 const handlerGetCurriculo = (req, res, next) => {
-    res.render('curriculo-form', {
+    res.render('curriculo-form-aluno', {
         nome: "TESTE EJS"
     });
 }
