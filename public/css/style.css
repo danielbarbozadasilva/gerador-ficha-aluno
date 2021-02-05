@@ -59,38 +59,64 @@ main {
     margin: auto;
     position: relative;
     background-color: white;
-    line-height: 1.7em;
-    font-weight: 500;
     margin-top: 5%;
     margin-bottom: 5%;
-    color: #07124e;
     height: 100%;
 }
 
-main .tituloFormulario {
+main .titulo1 {
     font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
     font-size: 35px;
     font-weight: bold;
     line-height: 1.7em;
-    text-align: center;
+    text-align: left;
+    color: #07124e;
 }
-
-main .coluna1 {}
-
-main .coluna2 {}
-
-section.secao01 {}
-
-
-section label {
+main section form .titulo2 {
+    font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 35px;
     font-weight: bold;
-    /* color: #212529; */
+    line-height: 1.7em;
+    text-align: left;
     color: #07124e;
 }
 
-section input {
-    display: block;
-    width: 35%;
+main section form{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+
+main section form .coluna1 {
+    width: 50%;
+}
+
+main section form .coluna2 {
+    width: 50%;
+}
+
+main section form label {
+    font-size: 17px;
+    line-height: 1.7em;
+    font-weight: bold;
+    color: #07124e;
+}
+
+main section form button {
+    color: #771700 !important;
+    border-color: #edd29a;
+    background-color: #edd29a;
+    margin-top: 3%;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    border-radius: 7px;
+    width: 20%;
+    border: none;
+}
+
+main section form input {
+    width: 50%;
     height: 30px;
     padding: 5px;
     font-size: 16px;
@@ -104,7 +130,7 @@ section input {
     /* transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; */
 }
 
-input:focus {
+main section form input:focus {
     color: #495057;
     background-color: #fff;
     border-color: #c7d0da;
@@ -112,21 +138,7 @@ input:focus {
     box-shadow: 0 0 0 .2rem rgba(195, 202, 209, 0.25)
 }
 
-section button {
-    color: #771700 !important;
-    border-color: #edd29a;
-    background-color: #edd29a;
-    margin-top: 3%;
-    padding: 10px;
-    font-size: 18px;
-    line-height: 1.5;
-    border-radius: 7px;
-    display: block;
-    width: 10%;
-    border: none;
-}
-
-section .form-group {
+main section form .form-group {
     margin-top: 15px;
 }
 
