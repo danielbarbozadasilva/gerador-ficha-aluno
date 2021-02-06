@@ -4,13 +4,12 @@
     outline: none;
 }
 
-
 header .menu {
     width: 100%;
     height: 92px;
     top: 0;
     font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
-    background-color: rgba(223, 213, 189, 0.7);
+    background-color: #501417;
     text-align: center;
     color: white;
     font-weight: bold;
@@ -31,7 +30,7 @@ header .menu ul li {
 header .menu ul li a {
     text-decoration: none;
     font-family: "Montserrat", sans-serif!important;
-    color: #290e0f;
+    color: #fff;
     line-height: 1.5;
     top: 0;
     display: inline-block;
@@ -51,6 +50,7 @@ header .menu ul li a:hover {
 }
 
 /* gerar o efeito escuro no vídeo */
+
 header .header-overlay {
     position: absolute;
     top: 92px;
@@ -103,16 +103,8 @@ header .typing-animation {
     }
 }
 
-
-img {
-    width: 120px;
-    height: 70px;
-    font-weight: bold;
-    background-color: #bb9b5f;
-    color: black;
-}
-
 /* MAIN */
+
 main {
     background-color: #EDDEAF;
     font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
@@ -125,22 +117,26 @@ main {
     height: 100%;
 }
 
-main .titulo1 {
-    font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
-    font-size: 35px;
-    font-weight: bold;
+main section {
     line-height: 1.7em;
-    text-align: left;
-    color: #07124e;
+    font-weight: 500;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-main section form .titulo2 {
-    font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
-    font-size: 35px;
+main section .titulo1 {
     font-weight: bold;
-    line-height: 1.7em;
-    text-align: left;
-    color: #07124e;
+    color: #501417;
+}
+
+main section h2 {
+    border-left: solid 1px #141414;
+    color: #501417;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    line-height: 1.2;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 main section form {
@@ -158,14 +154,12 @@ main section form .coluna2 {
 }
 
 main section form label {
-    font-size: 17px;
-    line-height: 1.7em;
     font-weight: bold;
-    color: #07124e;
+    color: #501417;
 }
 
 main section form button {
-    color: #771700 !important;
+    color: #771700;
     border-color: #edd29a;
     background-color: #edd29a;
     margin-top: 3%;
@@ -189,7 +183,6 @@ main section form input {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 5px;
-    /* transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; */
 }
 
 main section form input:focus {
@@ -205,7 +198,6 @@ main section form .form-group {
 }
 
 /* FOOTER */
-
 footer {
     width: 100%;
     display: block;

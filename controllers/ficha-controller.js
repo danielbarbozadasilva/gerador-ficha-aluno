@@ -14,7 +14,7 @@ const handlerPostFicha = (req, res, next) => {
 
     /* cria view model para render curriculo */
     const viewModel = {
-        menssagem: "TESTE POST CURRICULO",
+        menssagem: "TESTE POST FICHA",
         nome: req.body.nome,
         endereco: req.body.endereco,
         complemento: req.body.complemento,
@@ -45,7 +45,7 @@ const handlerPostFicha = (req, res, next) => {
 
     /* criar html - carregou o 'html' para a memória, 'filesystem' trabalha
     na raiz, utf8 (método fillesync para escrever em caractéres alfanuméricos) */
-    var htmlText = fs.readFileSync('./views/curriculo-pdf.ejs', 'utf8');
+    var htmlText = fs.readFileSync('./views/ficha-pdf.ejs', 'utf8');
     var htmlPronto = ejs.render(htmlText, viewModel);
 
 // TRANSFORMAR EM PDF
