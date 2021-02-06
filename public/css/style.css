@@ -4,69 +4,13 @@
     outline: none;
 }
 
-/* gerar o efeito escuro no vídeo */
-header .header-overlay {
-    position: absolute;
-    top: 92px;
-    left: 0;
-    width: 100%;
-    height: 90vh;
-    z-index: -1;
-    background: rgba(0, 0, 0, 0.4);
-    opacity: 0.85;
-}
-
-header .fullscreen-video-wrap {
-    position: relative;
-    width: 100%;
-    z-index: -1;
-}
-
-header .line {
-    border-right: 2px solid rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    font-family: "Special Elite", monospace!important;
-    font-size: 3em;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 250px;
-    white-space: nowrap;
-    overflow: hidden;
-    line-height: 1.5em;
-}
-
-header .typing-animation {
-    animation: blinkCursor 500ms steps(40) infinite normal, typing 5s steps(50) 0s normal both;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 16em;
-    }
-}
-
-@keyframes blinkCursor {
-    from {
-        border-right-color: rgba(255, 255, 255, 0.75);
-    }
-    to {
-        border-right-color: transparent;
-    }
-}
-
-/* HEADER */
 
 header .menu {
     width: 100%;
     height: 92px;
     top: 0;
     font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
-    background-color: rgb(255, 226, 159, 0.7);
-
-    background-color: #FFE29F;
+    background-color: rgba(223, 213, 189, 0.7);
     text-align: center;
     color: white;
     font-weight: bold;
@@ -106,6 +50,60 @@ header .menu ul li a:hover {
     text-decoration: underline;
 }
 
+/* gerar o efeito escuro no vídeo */
+header .header-overlay {
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0.85;
+}
+
+header .fullscreen-video-wrap {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+header .line {
+    border-right: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-family: "Special Elite", monospace!important;
+    font-size: 3em;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1.5em;
+}
+
+header .typing-animation {
+    animation: blinkCursor 400ms steps(40) infinite normal, typing 4s steps(40) 0s normal both;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16em;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
 img {
     width: 120px;
     height: 70px;
@@ -115,7 +113,6 @@ img {
 }
 
 /* MAIN */
-
 main {
     background-color: #EDDEAF;
     font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
