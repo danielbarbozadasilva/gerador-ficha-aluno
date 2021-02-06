@@ -4,14 +4,7 @@
     outline: none;
 }
 
-.fullscreen-video-wrap {
-
-}
-
-#tyMaquina {
-
-}
-
+/* gerar o efeito escuro no vídeo */
 header .header-overlay {
     position: absolute;
     top: 92px;
@@ -43,7 +36,7 @@ header .line {
 }
 
 header .typing-animation {
-    animation: blinkCursor 400ms steps(40) infinite normal, typing 4s steps(40) 0s normal both;
+    animation: blinkCursor 500ms steps(40) infinite normal, typing 5s steps(50) 0s normal both;
 }
 
 @keyframes typing {
